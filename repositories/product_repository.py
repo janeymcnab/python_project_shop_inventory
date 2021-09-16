@@ -24,6 +24,19 @@ def select_all():
         products.append(product)
     return products
 
+
+def select(id):
+    product = None
+    sql = "SELECT * FROM products WHERE id = %s"
+    values = [id]
+    result = run_sql(sql, values)[0]
+
+    if result is not None:
+        manufacturer = manufacturer_repository.select(result['manufacturer_id'])
+        product = Product(result['name'], result['description'], result['stock_quantity'], result['buying_cost'], result['selling_price'], result['origin'], result['id'], manufacturer)
+    return product
+
+
 def delete_all():
     sql = "DELETE  FROM products"
     run_sql(sql)

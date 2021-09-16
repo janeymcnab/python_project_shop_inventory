@@ -17,6 +17,9 @@ def products():
     manufacturer = manufacturer_repository.select_all()
     return render_template('products/index.html', products = products, manufacturer = manufacturer)
 
+
+
+
 # NEW
 # GET '/products/new'
 
@@ -25,6 +28,12 @@ def products():
 
 # SHOW
 # GET '/products/<id>'
+
+@products_blueprint.route('/products/<id>', methods=['GET'])
+def show_product(id):
+    product = product_repository.select(id)
+    return render_template('products/index.html', product = product)
+
 
 # EDIT
 # GET '/products/<id>/edit'
