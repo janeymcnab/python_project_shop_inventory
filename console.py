@@ -1,5 +1,5 @@
 import pdb 
-from models.product import Product
+from models.product import *
 from models.manufacturer import Manufacturer
 
 import repositories.manufacturer_repository as manufacturer_repository
@@ -48,7 +48,8 @@ product7 = Product('Blue Stilton', 'Creamy texture with mellow aromatic finish. 
 product_repository.save(product7)
     
 
-
+# print(product4.stock_level_check())
+# print(product6.stock_level_check())
 
 
 pdb.set_trace()
