@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Edit Manufacturer:</h2>
+
+<form action="/manufacturers" methods="POST">
+    <div>
+        <label for = "name">Name:</label>
+        <input name = "name" type = text id = name>
+    </div>
+    <div>
+        <label for = "address">Address:</label>
+        <input address = "address" type = text id = address>
+    </div>
+    <div>
+        <label for = "phone-number">Phone Number:</label>
+        <input phone-number = "phone-number" type = text id = phone-number>
+    </div>
+    <div>
+        <input type="submit">
+    </div>
+</form>
+
+{% endblock %}
