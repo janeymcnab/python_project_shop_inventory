@@ -12,6 +12,18 @@ def save(product):
     product.id = results[0]['id']
     return product
 
+def select_all():
+    products = []
+
+    sql = "SELECT * FROM products"
+    results = run_sql(sql)
+
+    for row in results:
+        manufacturer = manufacturer_repository.select(row['manufacturer_id'])
+        product = Product(row['name'], row['description'], row['stock_quantity'], row['buying_cost'], row['selling_price'], row['origin'], manufacturer)
+        products.append(product)
+    return products
+
 def delete_all():
     sql = "DELETE  FROM products"
     run_sql(sql)

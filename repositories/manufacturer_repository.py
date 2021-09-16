@@ -16,11 +16,24 @@ def select_all():
     results = run_sql(sql)
 
     for row in results:
-        manufacturer = Manufacturer(row['name'], row['address'], row['phone_number'], row ['product_list'], row['id'])
+        manufacturer = Manufacturer(row['name'], row['address'], row['phone_number'], row['product_list'], row['id'])
         manufacturers.append(manufacturer)
     return manufacturers
+
+
+def select(id):
+    manufacturer = None
+    sql = "SELECT * FROM manufacturers WHERE id = %s"
+    values = [id]
+    result = run_sql(sql, values)[0]
+
+    if result is not None:
+        manufacturer = Manufacturer(result['name'], result['address'], result['phone_number'], result['product_list'], result['id'])
+        return manufacturer
 
 def delete_all():
     sql = "DELETE  FROM manufacturers"
     run_sql(sql)
+
+
 
