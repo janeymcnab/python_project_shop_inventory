@@ -9,6 +9,17 @@ def save(manufacturer):
     manufacturer.id = results[0]['id']
     return manufacturer
 
+def select_all():
+    manufacturers = []
+
+    sql = "SELECT * FROM manufacturers"
+    results = run_sql(sql)
+
+    for row in results:
+        manufacturer = Manufacturer(row['name'], row['address'], row['phone_number'], row ['product_list'], row['id'])
+        manufacturers.append(manufacturer)
+    return manufacturers
+
 def delete_all():
     sql = "DELETE  FROM manufacturers"
     run_sql(sql)

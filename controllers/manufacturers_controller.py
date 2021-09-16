@@ -8,6 +8,10 @@ manufacturers_blueprint = Blueprint("manufacturers", __name__)
 
 # INDEX
 # GET '/manufacturers'
+@manufacturers_blueprint.route('/manufacturers')
+def manufacturers():
+    manufacturers = manufacturer_repository.select_all()
+    return render_template('manufacturers/index.html', manufacturers = manufacturers)
 
 # NEW
 # GET '/manufacturers/new'
