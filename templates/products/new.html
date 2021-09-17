@@ -1,26 +1,44 @@
 {% extends 'base.html' %}
 {% block content %}
-    <h2>Update a Product</h2>
+<h2>New Product:</h2>
 
-    <form action="/products/{{ product.id }}" method="POST">
-        <div>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" value="{{ product.name }}">
-        </div>
-        <div>
-            <label for="manufacturer">Manufacturer:</label>
-            <select name="manufacturer_id" id="manufacturer">
-                {% for manufacturer in manufacturers %}
-                <option value="{{ manufacturer.id }}" {% if manufacturer.id == product.manufacturer.id %} selected {% endif %}>
-                    {{ manufacturer.name }}
-                </option>
-                {% endfor %}
-            </select>
-        </div>
-        <div>
-            <input type="submit">
-        </div>
-    </form>
-
-
-{% endblock content %}
+<form action="/products" method="post">
+    <div>
+        <label for = "name">Name:</label>
+        <input name = "name" type = text id = name>
+    </div>
+    <div>
+        <label for = "description">Description:</label>
+        <input name = "description" type = text id = description>
+    </div>
+    <div>
+        <label for = "stock_quantity">Stock Quantity:</label>
+        <input name = "stock_quantity" type = text id = stock_quantity>
+    </div>
+    <div>
+        <label for = "buying_cost">Buying Cost:</label>
+        <input name = "buying_cost" type = text id = buying_cost>
+    </div>
+    <div>
+        <label for = "selling_price">Selling Price:</label>
+        <input name = "selling_price" type = text id = selling_price>
+    </div>
+    <div>
+        <label for = "origin">Origin:</label>
+        <input name = "origin" type = text id = origin>
+    </div>
+    <div>
+        <label for="manufacturer">Manufacturer:</label>
+        <select id="manufacturer" name="manufacturer_id">
+          {% for manufacturer in manufacturers %}
+            <option value="{{ manufacturer.id }}">
+              {{ manufacturer.name }}
+            </option>
+          {% endfor %}
+        </select>
+      </div>
+    <div>
+       <button type = "submit">Save New Product</button>
+    </div>
+</form>
+{% endblock %}

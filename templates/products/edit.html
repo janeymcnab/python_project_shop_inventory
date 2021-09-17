@@ -28,9 +28,15 @@
         <input name = "origin" type = text id = origin>
     </div>
     <div>
-        <label for = "manufacturer">Manufacturer:</label>
-        <input name = "manufacturer_id" type = text id = manufacturer>
-    </div>
+        <label for="manufacturer">Manufacturer:</label>
+        <select id="manufacturer" name="manufacturer_id">
+          {% for manufacturer in manufacturers %}
+            <option value="{{ manufacturer.id }}">
+              {{ manufacturer.name }}
+            </option>
+          {% endfor %}
+        </select>
+      </div>
     <div>
        <button type = "submit">Update</button>
     </div>

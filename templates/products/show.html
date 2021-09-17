@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
     
-{% for product in products %}
+
 <table>
     <tr>
         <th>Name</th>
@@ -19,9 +19,9 @@
         <td>{{ product.buying_cost }}</td>
         <td>{{ product.selling_price }}</td>
         <td>{{ product.origin }}</td>
-        <td>{{ product.manufacturer }}</td>
+        <td>{{ product.manufacturer.name }}</td>
     </tr>
 </table>
 
- {% endfor %}    
+  
 {% endblock %}

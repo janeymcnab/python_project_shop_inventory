@@ -1,3 +1,4 @@
+from itertools import product
 from controllers.manufacturers_controller import manufacturers
 from flask import Flask, render_template, request, redirect
 from flask import Blueprint
@@ -14,8 +15,7 @@ products_blueprint = Blueprint("products", __name__)
 @products_blueprint.route('/products')
 def products():
     products = product_repository.select_all()
-    manufacturer = manufacturer_repository.select_all()
-    return render_template('products/index.html', products = products, manufacturer = manufacturer)
+    return render_template('products/index.html', products = products)
 
 
 # NEW
@@ -24,7 +24,7 @@ def products():
 @products_blueprint.route("/products/new")
 def new_product():
     manufacturers = manufacturer_repository.select_all()
-    return render_template("products/new.html", manufacturers=manufacturers)
+    return render_template("products/new.html", manufacturers = manufacturers)
 
 # CREATE
 # POST '/products'
@@ -39,8 +39,8 @@ def create_product():
     origin = request.form["origin"]
     manufacturer_id = request.form["manufacturer_id"]
     manufacturer = manufacturer_repository.select(manufacturer_id)
-    new_product = Product(name, description, stock_quantity, buying_cost, selling_price, origin, manufacturer)
-    product_repository.save(new_product)
+    product = Product(name, description, stock_quantity, buying_cost, selling_price, origin, manufacturer)
+    product_repository.save(product)
     return redirect("/products")
 
 
