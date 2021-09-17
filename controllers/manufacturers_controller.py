@@ -1,8 +1,10 @@
+from itertools import product
 from flask import Flask, render_template, request, redirect
 from flask import Blueprint
 from models.manufacturer import Manufacturer
 from models.product import Product
 import repositories.manufacturer_repository as manufacturer_repository
+
 
 manufacturers_blueprint = Blueprint("manufacturers", __name__)
 

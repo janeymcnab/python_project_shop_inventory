@@ -1,3 +1,4 @@
+DROP TABLE IF EXISTS details;
 DROP TABLE IF EXISTS products;
 DROP TABLE IF EXISTS manufacturers;
 
@@ -18,6 +19,12 @@ CREATE TABLE products(
     selling_price INT,
     origin VARCHAR(255) NOT NULL,
     manufacturer_id INT REFERENCES manufacturers(id) ON DELETE CASCADE
+);
+
+CREATE TABLE details(
+    id SERIAL PRIMARY KEY,
+    product_id INT REFERENCES products(id),
+    manufacturer_id INT REFERENCES manufacturers(id)
 );
 
 INSERT INTO manufacturers (name, address, phone_number, product_list) VALUES ('McNabb and Collie', 'The Cow Shed, Achiltibuie', '01899 220 8989', 'Gouda, Auld Reekie');

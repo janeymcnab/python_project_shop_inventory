@@ -1,9 +1,13 @@
 import pdb 
-from models.product import *
-from models.manufacturer import Manufacturer
 
-import repositories.manufacturer_repository as manufacturer_repository
+from models.product import *
 import repositories.product_repository as product_repository
+
+from models.manufacturer import Manufacturer
+import repositories.manufacturer_repository as manufacturer_repository
+
+from models.detail import Detail
+import repositories.detail_repository as detail_repository
 
 product_repository.delete_all()
 manufacturer_repository.delete_all()
@@ -46,6 +50,28 @@ product_repository.save(product6)
 
 product7 = Product('Blue Stilton', 'Creamy texture with mellow aromatic finish. Pasteurised', 3500, 2.00, 4.00, 'England', manufacturer2)
 product_repository.save(product7)
+
+
+detail1 = Detail(product1, manufacturer4)
+detail_repository.save(detail1)
+
+detail2 = Detail(product2, manufacturer1)
+detail_repository.save(detail2)
+
+detail3 = Detail(product3, manufacturer1)
+detail_repository.save(detail3)
+
+detail4 = Detail(product4, manufacturer5)
+detail_repository.save(detail4)
+
+detail5 = Detail(product5, manufacturer5)
+detail_repository.save(detail5)
+
+detail6 = Detail(product5, manufacturer3)
+detail_repository.save(detail6)
+
+detail7 = Detail(product7, manufacturer2)
+detail_repository.save(detail7)
     
 
 # print(product4.stock_level_check())
