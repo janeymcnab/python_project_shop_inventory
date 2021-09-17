@@ -78,7 +78,7 @@ def update_product(id):
     manufacturer = manufacturer_repository.select(manufacturer_id)
     product = Product(name, description, stock_quantity, buying_cost, selling_price, origin, manufacturer, id)
     product_repository.update(product)
-    return redirect("/products")
+    return redirect ("/products")
 
 
 

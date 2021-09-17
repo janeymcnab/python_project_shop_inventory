@@ -10,15 +10,17 @@
         <th>Selling Price</th>
         <th>Origin</th>
         <th>Manufacturer</th>
+        <th>Mark Up</th>
     </tr>
     <tr>
         <td>{{ product.name }}</td>
         <td>{{ product.description }}</td>
-        <td>{{ product.stock_quantity }}</td>
-        <td>{{ product.buying_cost }}</td>
-        <td>{{ product.selling_price }}</td>
+        <td>{{ product.stock_quantity }}g</td>
+        <td>£{{ product.buying_cost }} p/100g</td>
+        <td>£{{ product.selling_price }} p/100g</td>
         <td>{{ product.origin }}</td>
         <td>{{ product.manufacturer.name }}</td>
+        <td>{{(product.selling_price-product.buying_cost)/product.buying_cost * 100}}%</td>
     </tr>
 </table>
 <br>
