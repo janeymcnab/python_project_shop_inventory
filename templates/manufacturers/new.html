@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>New Manufacturer:</h2>    
+
+<form action="/manufacturers" method="post">
+    <div>
+        <label for = "name">Name:</label>
+        <input name = "name" type = text id = name>
+    </div>
+    <div>
+        <label for = "address">Address:</label>
+        <input name = "address" type = text id = address>
+    </div>
+    <div>
+        <label for = "phone_number">Phone Number:</label>
+        <input name = "phone_number" type = text id = phone_number>
+    </div>
+    <div>
+        <label for = "product_list">Product:</label>
+        <input name = "product_list" type = text id = product_list>
+    </div>
+    <div>
+       <button type = "submit">Update</button>
+    </div>
+</form>
+{% endblock content %}

@@ -4,14 +4,9 @@
     <div>
         <a href = "/manufacturers/{{ manufacturer.id }}"> {{ manufacturer.name }} </a>
         <address> {{ manufacturer.address }} </address>
-        <address> {{ manufacturer.phone_number }} </address>
-        <ul>
-           <li> {{ manufacturer.product_list }} </li>
-        </ul>
-        <a href="/manufacturers/{{ manufacturer.id }}/edit">Edit Manufacturer</a>
     </div>
     <hr>
-
- {% endfor %}    
+ {% endfor %}   
+<li><a href = "/manufacturers/new">Add New Manufacturer</a></li>   
 {% endblock %}
 

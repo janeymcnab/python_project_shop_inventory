@@ -22,6 +22,11 @@
     </tr>
 </table>
 <br>
-    <a href = "/products/{{ product.id }}/edit">Edit</a>
+
+<a href = "/products/{{ product.id }}/edit">Edit</a>
+
+<form action="/products/{{ product.id }}/delete" method="POST">
+    <input type="submit" value="Delete">
+</form>
   
 {% endblock %}

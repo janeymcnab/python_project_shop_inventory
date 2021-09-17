@@ -17,7 +17,7 @@ CREATE TABLE products(
     buying_cost INT,
     selling_price INT,
     origin VARCHAR(255) NOT NULL,
-    manufacturer_id INT REFERENCES manufacturers(id)
+    manufacturer_id INT REFERENCES manufacturers(id) ON DELETE CASCADE
 );
 
 INSERT INTO manufacturers (name, address, phone_number, product_list) VALUES ('McNabb and Collie', 'The Cow Shed, Achiltibuie', '01899 220 8989', 'Gouda, Auld Reekie');

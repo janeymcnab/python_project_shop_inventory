@@ -1,5 +1,27 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h3>hhhhhhhh</h3>
+    <h3>Manufacturer Details</h3>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Phone Number</th>
+            <th>Product List</th>
+        </tr>
+        <tr>
+            <td>{{ manufacturer.name }}</td>
+            <td>{{ manufacturer.address }}</td>
+            <td>{{ manufacturer.phone_number }}</td>
+            <td><ul><li> {{ manufacturer.product_list }} </li></ul></td>
+        </tr>
+    </table>
+<br>
+
+<a href = "/manufacturers/{{ manufacturer.id }}/edit">Edit</a>
+
+<form action="/manufacturers/{{ manufacturer.id }}/delete" method="POST">
+    <input type="submit" value="Delete">
+</form>
 {% endblock content %}
+
