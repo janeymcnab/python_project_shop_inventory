@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Update Product:</h2>
+
+<form action="/products/{{ product.id }}" method="post">
+    <div>
+        <label for = "name">Name:</label>
+        <input name = "name" type = text id = name>
+    </div>
+    <div>
+        <label for = "description">Description:</label>
+        <input name = "description" type = text id = description>
+    </div>
+    <div>
+        <label for = "stock_quantity">Stock Quantity:</label>
+        <input name = "stock_quantity" type = text id = stock_quantity>
+    </div>
+    <div>
+        <label for = "buying_cost">Buying Cost:</label>
+        <input name = "buying_cost" type = text id = buying_cost>
+    </div>
+    <div>
+        <label for = "selling_price">Selling Price:</label>
+        <input name = "selling_price" type = text id = selling_price>
+    </div>
+    <div>
+        <label for = "origin">Origin:</label>
+        <input name = "origin" type = text id = origin>
+    </div>
+    <div>
+        <label for = "manufacturer">Manufacturer:</label>
+        <input name = "manufacturer_id" type = text id = manufacturer>
+    </div>
+    <div>
+       <button type = "submit">Update</button>
+    </div>
+</form>
+{% endblock %}

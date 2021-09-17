@@ -1,5 +1,27 @@
 {% extends 'base.html' %}
-
 {% block content %}
     
-{% endblock content %}
+{% for product in products %}
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Stock Quantity</th>
+        <th>Buying Cost</th>
+        <th>Selling Price</th>
+        <th>Origin</th>
+        <th>Manufacturer</th>
+    </tr>
+    <tr>
+        <td>{{ product.name }}</td>
+        <td>{{ product.description }}</td>
+        <td>{{ product.stock_quantity }}</td>
+        <td>{{ product.buying_cost }}</td>
+        <td>{{ product.selling_price }}</td>
+        <td>{{ product.origin }}</td>
+        <td>{{ product.manufacturer }}</td>
+    </tr>
+</table>
+
+ {% endfor %}    
+{% endblock %}
