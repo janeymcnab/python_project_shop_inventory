@@ -1,6 +1,5 @@
 {% extends 'base.html' %}
 {% block content %}
-    
 
 <table>
     <tr>
@@ -22,6 +21,7 @@
         <td>{{ product.manufacturer.name }}</td>
     </tr>
 </table>
-
+<br>
+    <a href = "/products/{{ product.id }}/edit">Edit</a>
   
 {% endblock %}

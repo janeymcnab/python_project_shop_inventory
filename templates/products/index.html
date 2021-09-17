@@ -4,13 +4,21 @@
 <h2>Product List</h2>
 
 {% for product in products %}
+
+    
+        {% if product.check_if_low() == True %}
+            <div>STOCK LOW</div>
+        {% endif %}
+
+        {% if product.check_if_out() == True %}
+            <div>OUT OF STOCK</div>
+        {% endif %}
+    
     <div>
         <a href = "/products/{{ product.id }}"> {{ product.name }} </a>
         <p> Stock Quantity {{ product.stock_quantity }}(g) </p>
         <p> Price (per 100g) £{{ product.selling_price }} </p>
         <a href = "/manufacturers/{{ product.manufacturer.id }}"> {{ product.manufacturer.name }} </a>
-        <br>
-        <a href = "/products/{{ product.id }}/edit">Edit</a>
         <hr>
     </div>
 
