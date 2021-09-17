@@ -9,6 +9,7 @@ import repositories.manufacturer_repository as manufacturer_repository
 from models.detail import Detail
 import repositories.detail_repository as detail_repository
 
+detail_repository.delete_all()
 product_repository.delete_all()
 manufacturer_repository.delete_all()
 

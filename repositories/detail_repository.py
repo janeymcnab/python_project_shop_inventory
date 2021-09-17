@@ -22,7 +22,7 @@ def select_all():
     for row in results:
         product = product_repository.select(row['product_id'])
         manufacturer = manufacturer_repository.select(row['manufacturer_id'])
-        detail = detail(product, manufacturer, row['id'])
+        detail = Detail(product, manufacturer, row['id'])
         details.append(detail)
     return details
 
@@ -39,13 +39,13 @@ def delete_all():
     sql = "DELETE  FROM details"
     run_sql(sql)
 
-def delete(id):
-    sql = "DELETE FROM details WHERE id = %s"
-    values = [id]
-    run_sql(sql, values)
+# def delete(id):
+#     sql = "DELETE FROM details WHERE id = %s"
+#     values = [id]
+#     run_sql(sql, values)
 
-def update(detail):
-    sql = "UPDATE details SET (product_id, manufacturer_id) = (%s, %s) WHERE id = %s"
-    values = [detail.product.id, detail.manufacturer.id, detail.id]
-    run_sql(sql, values)
+# def update(detail):
+#     sql = "UPDATE details SET (product_id, manufacturer_id) = (%s, %s) WHERE id = %s"
+#     values = [detail.product.id, detail.manufacturer.id, detail.id]
+#     run_sql(sql, values)
  

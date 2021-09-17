@@ -1,4 +1,13 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
 {% block content %}
-    <h3>TEST</h3>
-{% endblock content %}
+
+<h2>Products by {{ manufacturer.name }}</h2>
+
+{% for detail in details %}
+
+<section>
+    <p>TEST</p>
+</section>
+
+{% endfor %}
+{% endblock %}

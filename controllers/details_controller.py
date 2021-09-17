@@ -1,4 +1,6 @@
 
+from controllers.manufacturers_controller import manufacturers
+from controllers.products_controller import products
 from flask import Blueprint, Flask, redirect, render_template, request
 
 from models.detail import Detail
@@ -15,5 +17,6 @@ details_blueprint = Blueprint("details", __name__)
 @details_blueprint.route("/details")
 def details():
     details = detail_repository.select_all()
-    return render_template ('details/index.html', details = details)
-
+    product = product_repository.select_all()
+    manufacturer = manufacturer_repository.select_all()
+    return render_template ('details/index.html', details = details, product = product, manufacturer = manufacturer)
