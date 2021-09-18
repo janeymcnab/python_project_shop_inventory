@@ -1,4 +1,3 @@
-DROP TABLE IF EXISTS details;
 DROP TABLE IF EXISTS products;
 DROP TABLE IF EXISTS manufacturers;
 
@@ -21,11 +20,7 @@ CREATE TABLE products(
     manufacturer_id INT REFERENCES manufacturers(id) ON DELETE CASCADE
 );
 
-CREATE TABLE details(
-    id SERIAL PRIMARY KEY,
-    product_id INT REFERENCES products(id),
-    manufacturer_id INT REFERENCES manufacturers(id)
-);
+
 
 INSERT INTO manufacturers (name, address, phone_number, product_list) VALUES ('McNabb and Collie', 'The Cow Shed, Achiltibuie', '01899 220 8989', 'Gouda, Auld Reekie');
 INSERT INTO manufacturers (name, address, phone_number, product_list) VALUES ('Colsten Wynd', 'Basset Farms, Derbyshire', '01299 567 8989', 'Blue Stilton');
@@ -43,10 +38,4 @@ INSERT INTO products (name, description, stock_quantity, buying_cost, selling_pr
 INSERT INTO products (name, description, stock_quantity, buying_cost, selling_price, origin, manufacturer_id) VALUES ('Blue Stilton', 'Creamy texture with mellow aromatic finish. Pasteurised', 3500, 2.00, 4.00, 'England', 2);
 
 
-INSERT INTO details (product_id, manufacturer_id) VALUES (1, 4);
-INSERT INTO details (product_id, manufacturer_id) VALUES (2, 1);
-INSERT INTO details (product_id, manufacturer_id) VALUES (3, 1);
-INSERT INTO details (product_id, manufacturer_id) VALUES (4, 5);
-INSERT INTO details (product_id, manufacturer_id) VALUES (5, 5);
-INSERT INTO details (product_id, manufacturer_id) VALUES (6, 3);
-INSERT INTO details (product_id, manufacturer_id) VALUES (7, 2);
+
