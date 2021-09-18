@@ -1,5 +1,7 @@
-DROP TABLE IF EXISTS products;
-DROP TABLE IF EXISTS manufacturers;
+DROP TABLE details;
+DROP TABLE products;
+DROP TABLE manufacturers;
+
 
 CREATE TABLE manufacturers(
     id SERIAL PRIMARY KEY,
@@ -21,7 +23,6 @@ CREATE TABLE products(
 );
 
 
-
 INSERT INTO manufacturers (name, address, phone_number, product_list) VALUES ('McNabb and Collie', 'The Cow Shed, Achiltibuie', '01899 220 8989', 'Gouda, Auld Reekie');
 INSERT INTO manufacturers (name, address, phone_number, product_list) VALUES ('Colsten Wynd', 'Basset Farms, Derbyshire', '01299 567 8989', 'Blue Stilton');
 INSERT INTO manufacturers (name, address, phone_number, product_list) VALUES ('Villamayor de Calatravo', 'San Lorenzo, Toledo', '(+34) 6767 978', 'Campoveja Trufado');
@@ -36,6 +37,4 @@ INSERT INTO products (name, description, stock_quantity, buying_cost, selling_pr
 INSERT INTO products (name, description, stock_quantity, buying_cost, selling_price, origin, manufacturer_id) VALUES ('Comte', 'Aged for 22 months. Nutty and creamy hard cheese. Unpasteurised', 2000, 5.00, 8.00, 'France', 5);
 INSERT INTO products (name, description, stock_quantity, buying_cost, selling_price, origin, manufacturer_id) VALUES ('Campoveja Trufado', 'Hard cheese with a delicate truffle flavour. Unpasteurised', 500, 3.00, 5.50, 'Spain', 3);
 INSERT INTO products (name, description, stock_quantity, buying_cost, selling_price, origin, manufacturer_id) VALUES ('Blue Stilton', 'Creamy texture with mellow aromatic finish. Pasteurised', 3500, 2.00, 4.00, 'England', 2);
-
-
 
