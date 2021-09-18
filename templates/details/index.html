@@ -1,13 +1,15 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h2>Products by {{ manufacturer.name }}</h2>
+<h2>Products by Manufacturer</h2>
 
 {% for detail in details %}
+<h3> {{ detail.product.name }} by {{detail.manufacturer.name}}</h3>
+
+{% endfor %}
 
 <section>
     <p>TEST</p>
 </section>
 
-{% endfor %}
 {% endblock %}

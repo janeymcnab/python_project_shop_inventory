@@ -16,13 +16,12 @@ def save(detail):
 
 def select_all():
     details = []
-
     sql = "SELECT * FROM details"
     results = run_sql(sql)
-    for row in results:
-        product = product_repository.select(row['product_id'])
-        manufacturer = manufacturer_repository.select(row['manufacturer_id'])
-        detail = Detail(product, manufacturer, row['id'])
+    for result in results:
+        product = product_repository.select(result['product_id'])
+        manufacturer = manufacturer_repository.select(result['manufacturer_id'])
+        detail = Detail(product, manufacturer, result['id'])
         details.append(detail)
     return details
 

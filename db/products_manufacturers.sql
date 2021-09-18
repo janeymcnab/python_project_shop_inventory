@@ -41,3 +41,12 @@ INSERT INTO products (name, description, stock_quantity, buying_cost, selling_pr
 INSERT INTO products (name, description, stock_quantity, buying_cost, selling_price, origin, manufacturer_id) VALUES ('Comte', 'Aged for 22 months. Nutty and creamy hard cheese. Unpasteurised', 2000, 5.00, 8.00, 'France', 5);
 INSERT INTO products (name, description, stock_quantity, buying_cost, selling_price, origin, manufacturer_id) VALUES ('Campoveja Trufado', 'Hard cheese with a delicate truffle flavour. Unpasteurised', 500, 3.00, 5.50, 'Spain', 3);
 INSERT INTO products (name, description, stock_quantity, buying_cost, selling_price, origin, manufacturer_id) VALUES ('Blue Stilton', 'Creamy texture with mellow aromatic finish. Pasteurised', 3500, 2.00, 4.00, 'England', 2);
+
+
+INSERT INTO details (product_id, manufacturer_id) VALUES (1, 4);
+INSERT INTO details (product_id, manufacturer_id) VALUES (2, 1);
+INSERT INTO details (product_id, manufacturer_id) VALUES (3, 1);
+INSERT INTO details (product_id, manufacturer_id) VALUES (4, 5);
+INSERT INTO details (product_id, manufacturer_id) VALUES (5, 5);
+INSERT INTO details (product_id, manufacturer_id) VALUES (6, 3);
+INSERT INTO details (product_id, manufacturer_id) VALUES (7, 2);

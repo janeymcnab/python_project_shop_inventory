@@ -73,3 +73,4 @@ def update_manufacturer(id):
 def delete_manufacturer(id):
     manufacturer_repository.delete(id)
     return redirect("/manufacturers")
+

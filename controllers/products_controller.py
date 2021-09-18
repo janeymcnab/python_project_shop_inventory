@@ -50,7 +50,7 @@ def create_product():
 @products_blueprint.route('/products/<id>', methods=['GET'])
 def show_product(id):
     product = product_repository.select(id)
-    return render_template('products/show.html', product = product)
+    return render_template('products/show.html', product = product, manufacturers = manufacturers)
 
 
 # EDIT

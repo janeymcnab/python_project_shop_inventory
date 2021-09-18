@@ -52,3 +52,4 @@ def delete(id):
     sql = "DELETE FROM products WHERE id = %s"
     values = [id]
     run_sql(sql, values)
+

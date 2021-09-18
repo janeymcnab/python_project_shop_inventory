@@ -17,6 +17,4 @@ details_blueprint = Blueprint("details", __name__)
 @details_blueprint.route("/details")
 def details():
     details = detail_repository.select_all()
-    product = product_repository.select_all()
-    manufacturer = manufacturer_repository.select_all()
-    return render_template ('details/index.html', details = details, product = product, manufacturer = manufacturer)
+    return render_template ('details/index.html', details = details)
