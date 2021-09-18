@@ -33,13 +33,15 @@ def new_product():
 def create_product():
     name = request.form["name"]
     description = request.form["description"]
+    category = request.form["category"]
+    milk_type = request.form["milk_type"]
     stock_quantity = request.form["stock_quantity"]
     buying_cost = request.form["buying_cost"]
     selling_price = request.form["selling_price"]
     origin = request.form["origin"]
     manufacturer_id = request.form["manufacturer_id"]
     manufacturer = manufacturer_repository.select(manufacturer_id)
-    product = Product(name, description, stock_quantity, buying_cost, selling_price, origin, manufacturer)
+    product = Product(name, description, category, milk_type, stock_quantity, buying_cost, selling_price, origin, manufacturer)
     product_repository.save(product)
     return redirect("/products")
 
@@ -50,7 +52,7 @@ def create_product():
 @products_blueprint.route('/products/<id>', methods=['GET'])
 def show_product(id):
     product = product_repository.select(id)
-    return render_template('products/show.html', product = product, manufacturers = manufacturers)
+    return render_template('products/show.html', product = product)
 
 
 # EDIT
@@ -70,13 +72,15 @@ def edit_product(id):
 def update_product(id):
     name = request.form["name"]
     description = request.form["description"]
+    category = request.form["category"]
+    milk_type = request.form["milk_type"]
     stock_quantity = request.form["stock_quantity"]
     buying_cost = request.form["buying_cost"]
     selling_price = request.form["selling_price"]
     origin = request.form["origin"]
     manufacturer_id = request.form["manufacturer_id"]
     manufacturer = manufacturer_repository.select(manufacturer_id)
-    product = Product(name, description, stock_quantity, buying_cost, selling_price, origin, manufacturer, id)
+    product = Product(name, description, category, milk_type, stock_quantity, buying_cost, selling_price, origin, manufacturer, id)
     product_repository.update(product)
     return redirect("/products")
 

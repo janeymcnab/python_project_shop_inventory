@@ -12,6 +12,24 @@
         <input name = "description" type = text id = description>
     </div>
     <div>
+      <label for = "category">Category:</label>
+      <select id = "category" name = "category">
+        <option value= "" disabled selected>Select</option>
+        <option value = "unpasteurised">Unpasteurised</option>
+        <option value = "pasteurised">Pasteurised</option>
+      </select>
+    </div>
+    <div>
+      <label for = "milk_type"></label>Milk Type:</label>
+      <select id ="milk_type" name = "milk_type">
+        <option value= "" disabled selected>Select</option>
+        <option value = "cow">Cow</option>
+        <option value = "sheep">Sheep</option>
+        <option value = "goat">Goat</option>
+      </select>
+      </div>
+    <div>
+    <div>
         <label for = "stock_quantity">Stock Quantity:</label>
         <input name = "stock_quantity" type = text id = stock_quantity>
     </div>
@@ -31,6 +49,7 @@
         <label for="manufacturer">Manufacturer:</label>
         <select id="manufacturer" name="manufacturer_id">
           {% for manufacturer in manufacturers %}
+          <option value= "" disabled selected>Select</option>
             <option value="{{ manufacturer.id }}">
               {{ manufacturer.name }}
             </option>

@@ -1,8 +1,10 @@
 class Product:
-    def __init__(self, name, description, stock_quantity, buying_cost, selling_price, origin, manufacturer, id = None):
+    def __init__(self, name, description, category, milk_type, stock_quantity, buying_cost, selling_price, origin, manufacturer, id = None):
         self.name = name
         self.description = description
         self.stock_quantity = stock_quantity
+        self.category = category
+        self.milk_type = milk_type
         self.buying_cost = buying_cost
         self.selling_price = selling_price
         self.origin = origin
