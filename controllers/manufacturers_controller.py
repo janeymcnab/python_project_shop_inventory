@@ -36,7 +36,7 @@ def create_manufacturer():
     product_list = request.form ["product_list"]
     new_manufacturer = Manufacturer(name, address, phone_number, product_list)
     manufacturer_repository.save(new_manufacturer)     
-    return redirect("/manufacturers")
+    return redirect("/products/new")
 
 
 # SHOW
