@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
-    <h3>TEST</h3>
+    <h3>Results</h3>
     {% for product in products %}   
         {% if cheese_type == product.category.lower() %}
             <a href = "/products/{{ product.id }}">{{ product.name }}</a>

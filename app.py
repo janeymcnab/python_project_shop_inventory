@@ -1,4 +1,5 @@
 from flask import Flask, render_template
+from datetime import date, datetime 
 
 # Controllers go here -
 # from controllers.name_controller import names_blueprint
@@ -18,8 +19,9 @@ app.register_blueprint(filters_blueprint)
 
 @app.route('/')
 def home():
-    return render_template('index.html')
-
+    now = datetime.now()
+    date_time = now.strftime("%d/%m/%Y, %H:%M")
+    return render_template('index.html', date_time=date_time)
 
 if __name__ == '__main__':
     app.run(debug=True)

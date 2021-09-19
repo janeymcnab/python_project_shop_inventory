@@ -1,13 +1,15 @@
 {% extends 'base.html' %}
 {% block content %}
-    <h3>Milk Type</h3>
+    <h3>Results</h3>
     
     {% for product in products %} 
         {% if milk_type == product.milk_type.lower() %}
-        {{ product.name }} - <a href = "/products/{{ product.id }}">More Details</a>
+            {{ product.name }} - <a href = "/products/{{ product.id }}">More Details</a>
         <br>
         {% endif %}
     {% endfor %}
+
+    
 
 
 {% endblock content %}
