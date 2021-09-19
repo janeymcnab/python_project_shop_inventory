@@ -18,6 +18,7 @@ def products():
     return render_template('products/index.html', products = products)
 
 
+
 # NEW
 # GET '/products/new'
 

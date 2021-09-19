@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<form action="results/perform_filter" method="post">
+    <div>
+        <h3>Filter by Pasteurisation:</h3>
+        <label for = "cheese_type">Category:</label>
+        <select id = "cheese_type" name = "cheese_type" value = cheese_type>
+          <option value= "" disabled selected>Select</option>
+          <option value = "unpasteurised">Unpasteurised</option>
+          <option value = "pasteurised">Pasteurised</option>
+        </select>
+        <div>
+            <button type = "submit">Search</button>
+         </div>
+    </div>
+    </form>
+    <form action="results/milk_perform_filter" method="post">
+    <div>
+        <h3>Filter by Milk Type:</h3>
+        <label for = "milk_type"></label>Milk Type:</label>
+        <select id ="milk_type" name = "milk_type">
+          <option value= "" disabled selected>Select</option>
+          <option value = "cow">Cow</option>
+          <option value = "sheep">Sheep</option>
+          <option value = "goat">Goat</option>
+        </select>
+        </div>
+        <div>
+            <button type = "submit">Search</button>
+         </div>
+    </form>
+    
+
+{% endblock content %}
