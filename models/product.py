@@ -24,6 +24,12 @@ class Product:
         else:
             return False
 
+    def no_result(self, milk_type):
+        if self.milk_type == milk_type:
+            return False
+        else: 
+            return True
+
 
     
     # def stock_level_check(self):

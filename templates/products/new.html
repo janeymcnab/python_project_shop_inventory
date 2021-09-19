@@ -48,8 +48,8 @@
     <div>
         <label for="manufacturer">Manufacturer:</label>
         <select id="manufacturer" name="manufacturer_id">
-          {% for manufacturer in manufacturers %}
           <option value= "" disabled selected>Select</option>
+          {% for manufacturer in manufacturers %}
             <option value="{{ manufacturer.id }}">
               {{ manufacturer.name }}
             </option>

@@ -3,12 +3,8 @@
     <h3>TEST</h3>
     {% for product in products %}   
         {% if cheese_type == product.category.lower() %}
-            {{ product.name }}
+            <a href = "/products/{{ product.id }}">{{ product.name }}</a>
+            <br>
         {% endif %}
-    {% endfor %}
-    <hr>
-    {% for product in products %}
-        {{ product.name }} {{ product.category }}
-        <br>
     {% endfor %}
 {% endblock content %}

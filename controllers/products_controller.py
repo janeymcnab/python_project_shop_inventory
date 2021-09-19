@@ -17,8 +17,6 @@ def products():
     products = product_repository.select_all()
     return render_template('products/index.html', products = products)
 
-
-
 # NEW
 # GET '/products/new'
 
@@ -53,8 +51,8 @@ def create_product():
 @products_blueprint.route('/products/<id>', methods=['GET'])
 def show_product(id):
     product = product_repository.select(id)
-    manufacturer = manufacturer_repository.select(id)
-    return render_template('products/show.html', product = product, manufacturer = manufacturer)
+    manufacturers = manufacturer_repository.select_all()
+    return render_template('products/show.html', product = product, manufacturers = manufacturers)
 
 
 # EDIT
