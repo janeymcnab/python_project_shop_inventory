@@ -24,7 +24,7 @@
         <td>£{{ product.selling_price }}p/100g</td>
         <td>{{(product.selling_price-product.buying_cost)/product.selling_price*100}}%</td>
         <td>{{ product.origin }}</td>
-        <td>{{ product.manufacturer.name }}</td>
+        <td><a href = "/manufacturers/{{ product.manufacturer.id }}">{{ product.manufacturer.name }}</a></td>
     </tr>
 </table>
 <br>
