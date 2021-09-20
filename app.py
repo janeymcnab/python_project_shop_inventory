@@ -20,7 +20,7 @@ app.register_blueprint(filters_blueprint)
 @app.route('/')
 def home():
     now = datetime.now()
-    date_time = now.strftime("%d/%m/%Y, %H:%M")
+    date_time = now.strftime("%d/%m/%Y")
     return render_template('index.html', date_time=date_time)
 
 if __name__ == '__main__':

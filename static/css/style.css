@@ -5,3 +5,43 @@ body{
 * {
     font-family: "Open Sans", sans-serif;
 }
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #f5cc6e;
+    border-radius: 15px;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: #000;
+    text-align: center;
+    padding: 15px 16px;
+    text-decoration: none;
+  }
+
+  li a:hover {
+    background-color: #fffbe6;
+  }
+
+  #date-time{
+      float: right;
+      text-align: center;
+      padding: 14px 16px;
+      font-weight: bold;
+      font-size: large;
+  }
+
+  #logo{
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    
+  }

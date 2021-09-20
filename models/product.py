@@ -24,11 +24,10 @@ class Product:
         else:
             return False
 
-    def no_result(self, milk_type):
-        if self.milk_type == milk_type:
-            return False
-        else: 
-            return True
+    def decrease_stock(self, bought_amount):
+        self.stock_quantity -= bought_amount
+
+        
 
 
     

@@ -4,7 +4,6 @@
 <table>
     <tr>
         <th>Name</th>
-        <th>Description</th>
         <th>Category</th>
         <th>Milk Type</th>
         <th>Stock Quantity</th>
@@ -16,7 +15,6 @@
     </tr>
     <tr>
         <td>{{ product.name }}</td>
-        <td>{{ product.description }}</td>
         <td>{{ product.category }}</td>
         <td>{{ product.milk_type }}</td>
         <td>{{ product.stock_quantity }}g</td>
@@ -28,6 +26,8 @@
     </tr>
 </table>
 <br>
+<h3>Product Description:</h3>
+<p>{{ product.description }}</p>
 
 <section></section>
 <a href = "/products/{{ product.id }}/edit">Edit</a>
