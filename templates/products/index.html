@@ -3,25 +3,30 @@
 
 <h2>Product List</h2>
 
+    
+<table>
+    <tr>
+        <th>Product Name</th>
+        <th>Stock Quantity</th>
+        <th>Price /100g</th>
+        <th>Manufacturer</th>
+    </tr>
+
 {% for product in products %}
 
-    
-        {% if product.check_if_low() == True %}
-            <div>STOCK LOW</div>
-        {% endif %}
+        <tr {% if product.check_if_low() == True %}
+        style = "background-color:orange;"
+        {% endif %} {% if product.check_if_out() == True %}
+        style = "background-color:rgb(255, 0, 0);"
+        {% endif %}>
+            <td><a href = "/products/{{ product.id }}"> {{ product.name }} </a></td>
+            <td>{{ product.stock_quantity }}(g)</td>
+            <td>£{{ product.selling_price }} </td>
+            <td><a href = "/manufacturers/{{ product.manufacturer.id }}"> {{ product.manufacturer.name }} </a></td>
+        </tr>
 
-        {% if product.check_if_out() == True %}
-            <div>OUT OF STOCK</div>
-        {% endif %}
-    
-    <div>
-        <a href = "/products/{{ product.id }}"> {{ product.name }} </a>
-        <p> Stock Quantity {{ product.stock_quantity }}(g) </p>
-        <p> Price (per 100g) £{{ product.selling_price }} </p>
-        <a href = "/manufacturers/{{ product.manufacturer.id }}"> {{ product.manufacturer.name }} </a>
-        <hr>
-    </div>
-
- {% endfor %} 
- <a href = "/products/new">Add New Product</a>   
+    {% endfor %} 
+ 
+ 
+<a href = "/products/new">Add New Product</a>   
 {% endblock %}

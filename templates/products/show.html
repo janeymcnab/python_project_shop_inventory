@@ -15,7 +15,19 @@
         <th>Origin</th>
         <th>Manufacturer</th>
     </tr>
-    <tr>
+    {% if product.check_if_low() == True %}
+        <div >STOCK LOW</div>
+    {% endif %}
+
+    {% if product.check_if_out() == True %}
+        <div>OUT OF STOCK</div>
+    {% endif %}
+    
+    <tr {% if product.check_if_low() == True %}
+        style = "background-color:orange;"
+    {% endif %} {% if product.check_if_out() == True %}
+     style = "background-color:rgb(255, 0, 0);"
+    {% endif %}>
         <td>{{ product.name }}</td>
         <td>{{ product.category }}</td>
         <td>{{ product.milk_type }}</td>
