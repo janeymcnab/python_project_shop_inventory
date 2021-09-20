@@ -1,4 +1,25 @@
 {% extends 'base.html' %}
 {% block content %}
-    
+<h3>Sell a Product:</h3>
+    <form action = "/sell", method = "post">
+        <div>
+            <label for="product_id">Product:</label>
+            <select id="product_id" name="product_id">
+              <option value= "" disabled selected>Select</option>
+              {% for product in products %}
+                <option value="{{ product.id }}">
+                  {{ product.name }}
+                </option>
+              {% endfor %}
+            </select>
+          </div>
+          <br>
+          <div>
+            <label for = "amount">Amount:</label>
+            <input name = "amount" type = text id = amount placeholder  = "Per 100g">
+        </div>
+        <div>
+            <button type = "submit">Checkout Product</button>
+         </div>
+    </form>
 {% endblock content %}

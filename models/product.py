@@ -25,10 +25,8 @@ class Product:
             return False
 
     def decrease_stock(self, bought_amount):
-        self.stock_quantity -= bought_amount
-
-        
-
+        if self.stock_quantity > bought_amount:
+            self.stock_quantity -= bought_amount
 
     
     # def stock_level_check(self):
