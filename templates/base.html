@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/tables.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/forms.css') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-    <title>Nibs and Christie - Inventory</title>
+    <title>Nibs and Christie</title>
 </head>
 <body>
     <header>
@@ -19,7 +20,7 @@
                 <li><a href = "/products">Products</a></li>
                 <li><a href = "/manufacturers">Manufacturers</a></li>
                 <li><a href = "/filters">Product Filter</a></li>
-                <li><a href = "/sell">Sell</a></li>
+                <li></li>
                 <li id = date-time>{{ date_time }}</li>
             </ul>
         </nav>

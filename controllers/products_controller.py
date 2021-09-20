@@ -17,20 +17,14 @@ def products():
     products = product_repository.select_all()
     return render_template('products/index.html', products = products)
 
-@products_blueprint.route('/sell/')
-def sell_page():
-    products = product_repository.select_all() 
-    return render_template('products/sell.html', products = products)
-
-@products_blueprint.route('/sell', methods=['POST'])
-def sell():
-    product_id = request.form["product_id"]
+@products_blueprint.route('/products/<id>', methods=['POST'])
+def sell(id):
     bought_amount = request.form["amount"]
-    product = product_repository.select(product_id)
+    product = product_repository.select(id)
     product.decrease_stock(int(bought_amount))
     product_repository.update(product)
-    return redirect ('/products')
-
+    url = "/products/"+id
+    return redirect (url)
 
 # NEW
 # GET '/products/new'
@@ -66,7 +60,6 @@ def create_product():
 @products_blueprint.route('/products/<id>', methods=['GET'])
 def show_product(id):
     product = product_repository.select(id)
-    products = product_repository.select_all()
     manufacturers = manufacturer_repository.select_all()
     return render_template('products/show.html', product = product, manufacturers = manufacturers)
 

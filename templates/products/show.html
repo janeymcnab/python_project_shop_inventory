@@ -1,6 +1,8 @@
 {% extends 'base.html' %}
 {% block content %}
 
+<br>
+
 <table>
     <tr>
         <th>Name</th>
@@ -18,8 +20,8 @@
         <td>{{ product.category }}</td>
         <td>{{ product.milk_type }}</td>
         <td>{{ product.stock_quantity }}g</td>
-        <td>£{{ product.buying_cost }}p/100g</td>
-        <td>£{{ product.selling_price }}p/100g</td>
+        <td>£{{ product.buying_cost }}/100g</td>
+        <td>£{{ product.selling_price }}/100g</td>
         <td>{{(product.selling_price-product.buying_cost)/product.selling_price*100}}%</td>
         <td>{{ product.origin }}</td>
         <td><a href = "/manufacturers/{{ product.manufacturer.id }}">{{ product.manufacturer.name }}</a></td>
@@ -29,13 +31,29 @@
 <h3>Product Description:</h3>
 <p>{{ product.description }}</p>
 
-<section></section>
-<a href = "/products/{{ product.id }}/edit">Edit</a>
+<section>
+
+
+<form action="/products/{{ product.id }}/edit">
+    <input type="submit" value="Edit">
+</form>
 
 <form action="/products/{{ product.id }}/delete" method="POST">
     <input type="submit" value="Delete">
 </form>
-
 </section>
-  
+
+<h3>Checkout this Product:</h3>
+    <form action = "/products/{{ product.id }}" method="post">
+          <br>
+          <div>
+            <label for = "amount">Amount:</label>
+            <input name = "amount" type = text id = amount placeholder  = "Per 100g">
+        </div>
+        <br>
+        <div>
+            <button type = "submit">Checkout Product</button>
+         </div>
+    </form>
+
 {% endblock %}
