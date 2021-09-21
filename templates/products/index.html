@@ -2,6 +2,7 @@
 {% block content %}
 
 <h2>Product List</h2>
+
 <div class="container">
 <table>
     <tr>
@@ -28,12 +29,11 @@
     </table>
 </div>
 <br>
- 
-<!-- <a href = "/products/new">Add New Product</a>   -->
-
+<button class ="btn">
+    <i class="fas fa-plus"></i><a href = "/products/new">Add New Product</a>
+</button>
+<br>
 <section class="container">
-    <div class="title">Bar Chart</div>
-  
     <section class="chart"> 
       <section class="row-bars">
         {% for product in products %}
@@ -43,6 +43,9 @@
     </section>
   </section>
   <br>
+
+  
+
 
 
     

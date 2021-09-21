@@ -19,11 +19,15 @@
 <br>
 
 <form action="/manufacturers/{{ manufacturer.id }}/edit">
-    <input type="submit" value="Edit">
+    <button class ="btn">
+        <i class="fas fa-edit"> Edit</i>
+    </button>
 </form>
 <br>
 <form action="/manufacturers/{{ manufacturer.id }}/delete" method="POST">
-    <input type="submit" value="Delete">
+    <button class ="btn-delete">
+        <i class="far fa-trash-alt"> Delete</i> 
+    </button>
 </form>
 {% endblock content %}
 

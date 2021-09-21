@@ -50,16 +50,12 @@ ul {
   }
 
   /*bar chart stars here  */
-  /* .container {
-    margin: 70px 50px;
-  } */
-  
-  .title {
-    font-size: large;
-    font-weight: bold;
+  .container {
+    margin: 20px 10px;
   }
   
-  .chart {
+ 
+   .chart {
     position: relative;
   }
 
@@ -67,14 +63,14 @@ ul {
     position: absolute;
     top: 0;
     left: 0;
-    width: 90%;
+    width: 70%;
   }
   
   rbars {
     display: block;
     height: 20px;
     margin-top: 10px;
-    max-width: 90%;
+    max-width: 70%;
     padding: 5px;
   }
   rbars{

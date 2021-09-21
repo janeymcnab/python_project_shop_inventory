@@ -7,12 +7,12 @@
         <label for = "name">Name:</label>
         <input name = "name" type = text id = name>
     </div>
-    <br>
+    
     <div>
         <label for = "description">Description:</label>
         <input name = "description" type = text id = description>
     </div>
-    <br>
+    
     <div>
       <label for = "category">Category:</label>
       <select id = "category" name = "category">
@@ -21,7 +21,7 @@
         <option value = "pasteurised">Pasteurised</option>
       </select>
     </div>
-    <br>
+    
     <div>
       <label for = "milk_type"></label>Milk Type:</label>
       <select id ="milk_type" name = "milk_type">
@@ -31,27 +31,27 @@
         <option value = "goat">Goat</option>
       </select>
     </div>
-    <br>
+    
     <div>
         <label for = "stock_quantity">Stock Quantity:</label>
         <input name = "stock_quantity" type = text id = stock_quantity>
     </div>
-    <br>
+    
     <div>
         <label for = "buying_cost">Buying Cost:</label>
         <input name = "buying_cost" type = text id = buying_cost>
     </div>
-    <br>
+    
     <div>
         <label for = "selling_price">Selling Price:</label>
         <input name = "selling_price" type = text id = selling_price>
     </div>
-    <br>
+    
     <div>
         <label for = "origin">Origin:</label>
         <input name = "origin" type = text id = origin>
     </div>
-    <br>
+    
     <div>
         <label for="manufacturer">Manufacturer:</label>
         <select id="manufacturer" name="manufacturer_id">
@@ -64,8 +64,10 @@
         </select>
       </div>
       <br>
-    <div>
-       <button type = "submit">Save New Product</button>
-    </div>
+      <div>
+        <button class ="btn">
+          <i class="fas fa-check"> Save</i>
+        </button>
+     </div>
 </form>
 {% endblock %}

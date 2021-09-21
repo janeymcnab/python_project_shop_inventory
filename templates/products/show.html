@@ -47,7 +47,9 @@
 
 
 <form action="/products/{{ product.id }}/edit">
-    <input type="submit" value="Edit">
+    <button class ="btn">
+        <i class="fas fa-edit"> Edit</i>
+    </button>
 </form>
 
 
@@ -61,12 +63,16 @@
         </div>
         <br>
         <div>
-            <button type = "submit">Checkout Product</button>
+            <button class ="btn">
+                <i class="fas fa-shopping-basket"> Checkout</i>
+            </button>
          </div>
     </form>
 <br>
 <form action="/products/{{ product.id }}/delete" method="POST">
-        <input type="submit" value="Delete">
+    <button class ="btn-delete">
+        <i class="far fa-trash-alt"> Delete</i> 
+    </button>
     </form>
 </section>
 
