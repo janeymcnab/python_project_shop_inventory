@@ -72,14 +72,24 @@ ul {
     max-width: 100%;
     padding: 5px;
   }
+
+  @keyframes sliders{
+  0%   {width:50%}
+  100% {width:width}
+}
+  
   rbars{
     border-radius:10px;
     background-color: #f5cc6e;
+    animation: sliders;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
   }
+
 
 hr {
   background-color: #f5cc6e;
-  height: 5px;
+  height: 2px;
   border: none;
 }
 
