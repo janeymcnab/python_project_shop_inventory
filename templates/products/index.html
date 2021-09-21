@@ -1,9 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
-
-<h2>Product List</h2>
-
-<div class="container">
+<div class="product-table">
 <table>
     <tr>
         <th>Product Name</th>
@@ -27,12 +24,15 @@
 
     {% endfor %} 
     </table>
-</div>
-<br>
+<div>
+  <br>
 <button class ="btn">
     <i class="fas fa-plus"></i><a href = "/products/new">Add New Product</a>
 </button>
-<br>
+</div>
+</div>
+<hr>
+<h4 id = "bargraph-info">Max. Weight: 5000g</h4>
 <section class="container">
     <section class="chart"> 
       <section class="row-bars">
@@ -42,7 +42,7 @@
       </section>
     </section>
   </section>
-  <br>
+  
 
   
 

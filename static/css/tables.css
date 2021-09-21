@@ -1,3 +1,10 @@
+.product-table{
+  margin-left: 25%;
+  margin-right: auto;
+  width: 80%;
+}
+
+
 td, th {
     text-align: left;
   }
@@ -8,7 +15,11 @@ td, th {
   
   th {
     padding: 0px 20px 10px 0px;
-    border-bottom: 1px solid papayawhip;
+    border-bottom: 1px solid #f5cc6e;
+    font-size: 20px;
+  }
+  tr{
+    padding: 0px 20px 12px 0px;
   }
   
   table {
