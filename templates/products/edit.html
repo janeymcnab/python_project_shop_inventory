@@ -2,7 +2,7 @@
 {% block content %}
 <h2>Update Product:</h2>
 
-<form action="/products/{{ product.id }}" method="post">
+<form action="/products/{{ product.id }}" method="POST">
     <div>
         <label for = "name">Name:</label>
         <input name = "name" type = text id = name value = "{{ product.name }}" >

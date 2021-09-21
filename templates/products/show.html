@@ -24,9 +24,9 @@
     {% endif %}
     
     <tr {% if product.check_if_low() == True %}
-        style = "background-color:orange;"
+        style = "background-color:#f07e3c;"
     {% endif %} {% if product.check_if_out() == True %}
-     style = "background-color:rgb(255, 0, 0);"
+     style = "background-color:#f74519;"
     {% endif %}>
         <td>{{ product.name }}</td>
         <td>{{ product.category }}</td>
@@ -50,13 +50,10 @@
     <input type="submit" value="Edit">
 </form>
 
-<form action="/products/{{ product.id }}/delete" method="POST">
-    <input type="submit" value="Delete">
-</form>
-</section>
+
 
 <h3>Checkout this Product:</h3>
-    <form action = "/products/{{ product.id }}" method="post">
+    <form action = "/products/{{ product.id }}/sell" method="post">
           <br>
           <div>
             <label for = "amount">Amount:</label>
@@ -67,5 +64,10 @@
             <button type = "submit">Checkout Product</button>
          </div>
     </form>
+<br>
+<form action="/products/{{ product.id }}/delete" method="POST">
+        <input type="submit" value="Delete">
+    </form>
+</section>
 
 {% endblock %}

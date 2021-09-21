@@ -33,16 +33,16 @@ product_repository.save(product1)
 product2 = Product('Auld Reekie', 'Hard Smoked Cheese. Smoked over Whiskey.', 'Unpasteurised', 'Cow', 5000, 2.00, 4.50, 'Scotland', manufacturer1)
 product_repository.save(product2)
 
-product3 = Product('Gouda', 'Nutty, creamy with salt crystallisation.', 'Pasteurised','Cow', 3000, 2.40, 5.50, 'Scotland', manufacturer1)
+product3 = Product('Gouda', 'Nutty, creamy with salt crystallisation.', 'Pasteurised','Cow', 500, 2.40, 5.50, 'Scotland', manufacturer1)
 product_repository.save(product3)
 
-product4 = Product('Brie de Meux', 'Soft and creamy cheese.', 'Unpasteurised', 'Cow', 0, 3.00, 6.00, 'France', manufacturer5)
+product4 = Product('Brie de Meux', 'Soft and creamy cheese.', 'Unpasteurised', 'Cow', 1700, 3.00, 6.00, 'France', manufacturer5)
 product_repository.save(product4)
 
-product5 = Product('Comte', 'Aged for 22 months. Nutty and creamy hard cheese.', 'Unpasteurised', 'Cow', 2000, 5.00, 8.00, 'France', manufacturer5)
+product5 = Product('Comte', 'Aged for 22 months. Nutty and creamy hard cheese.', 'Unpasteurised', 'Cow', 0, 5.00, 8.00, 'France', manufacturer5)
 product_repository.save(product5)
 
-product6 = Product('Campoveja Trufado', 'Hard cheese with a delicate truffle flavour.', 'Unpasteurised', 'Sheep', 500, 3.00, 5.50, 'Spain', manufacturer3)
+product6 = Product('Campoveja Trufado', 'Hard cheese with a delicate truffle flavour.', 'Unpasteurised', 'Sheep', 2500, 3.00, 5.50, 'Spain', manufacturer3)
 product_repository.save(product6)
 
 product7 = Product('Blue Stilton', 'Creamy texture with mellow aromatic finish.', 'Pasteurised', 'Cow', 3500, 2.00, 4.00, 'England', manufacturer2)

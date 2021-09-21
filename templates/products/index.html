@@ -14,9 +14,9 @@
 {% for product in products %}
 
         <tr {% if product.check_if_low() == True %}
-        style = "background-color:orange;"
+        style = "background-color:#f07e3c;"
         {% endif %} {% if product.check_if_out() == True %}
-        style = "background-color:rgb(255, 0, 0);"
+        style = "background-color:#f74519;"
         {% endif %}>
             <td><a href = "/products/{{ product.id }}"> {{ product.name }} </a></td>
             <td>{{ product.stock_quantity }}(g)</td>
@@ -37,7 +37,7 @@
     <section class="chart"> 
       <section class="row-bars">
         {% for product in products %}
-        <rbars style="width:{{ (product.stock_quantity/5000)*100 }}%">{{ product.name }}</rbars>
+        <rbars style="width:{{(product.stock_quantity/5000)*100 }}%">{{ product.name }}</rbars>
         {% endfor %}
       </section>
     </section>
