@@ -48,3 +48,36 @@ ul {
   .product-details{
      background-color: transparent; 
   }
+
+  /*bar chart stars here  */
+  /* .container {
+    margin: 70px 50px;
+  } */
+  
+  .title {
+    font-size: large;
+    font-weight: bold;
+  }
+  
+  .chart {
+    position: relative;
+  }
+  
+  .row-bars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 500px;
+  }
+  
+  rbars {
+    display: block;
+    height: 20px;
+    margin-top: 20px;
+    max-width: 500px;
+    padding: 5px;
+  }
+  rbars{
+    background-color: #f5cc6e;
+    border-radius:15px;
+  }
