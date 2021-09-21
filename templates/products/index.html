@@ -27,37 +27,23 @@
     {% endfor %} 
     </table>
 </div>
+<br>
  
- 
-<a href = "/products/new">Add New Product</a>  
-
+<!-- <a href = "/products/new">Add New Product</a>   -->
 
 <section class="container">
     <div class="title">Bar Chart</div>
   
-    <section class="chart">
-      <!-- <section class="column-bars">
-        <cbars></cbars>
-        <cbars></cbars>
-        <cbars></cbars>
-        <cbars></cbars>
-        <cbars></cbars>
-        <cbars></cbars>
-        <cbars></cbars>
-        <cbars></cbars>
-        <cbars></cbars>
-        <cbars></cbars>
-      </section> -->
-  
+    <section class="chart"> 
       <section class="row-bars">
         {% for product in products %}
-        <rbars style="width:{{product.stock_quantity}}/5000*100%">{{ product.name }}</rbars>
+        <rbars style="width:{{ (product.stock_quantity/5000)*100 }}%">{{ product.name }}</rbars>
         {% endfor %}
       </section>
     </section>
   </section>
   <br>
-  
+
 
     
 {% endblock content %}

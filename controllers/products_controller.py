@@ -19,7 +19,7 @@ def products():
 
 @products_blueprint.route('/products/<id>', methods=['POST'])
 def sell(id):
-    bought_amount = request.form["amount"]
+    bought_amount = request.form["bought_amount"]
     product = product_repository.select(id)
     product.decrease_stock(int(bought_amount))
     product_repository.update(product)
