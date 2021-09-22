@@ -4,7 +4,7 @@
     
     {% for product in products %} 
         {% if milk_type == product.milk_type.lower() %}
-            {{ product.name }} - <a href = "/products/{{ product.id }}">More Details</a>
+            <a href = "/products/{{ product.id }}">{{ product.name }}</a>
         <br>
         {% endif %}
     {% endfor %}
