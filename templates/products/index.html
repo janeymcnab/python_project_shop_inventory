@@ -16,10 +16,10 @@
         {% endif %} {% if product.check_if_out() == True %}
         style = "background-color:#f74519;"
         {% endif %}>
-            <td><a href = "/products/{{ product.id }}"> {{ product.name }} </a></td>
+            <td class = "rounded1"><a href = "/products/{{ product.id }}"> {{ product.name }} </a></td>
             <td>{{ product.stock_quantity }}(g)</td>
             <td>£{{ product.selling_price }} </td>
-            <td><a href = "/manufacturers/{{ product.manufacturer.id }}"> {{ product.manufacturer.name }} </a></td>
+            <td class = "rounded2"><a href = "/manufacturers/{{ product.manufacturer.id }}"> {{ product.manufacturer.name }} </a></td>
         </tr>
 
     {% endfor %} 

@@ -49,8 +49,5 @@ product7 = Product('Blue Stilton', 'Creamy texture with mellow aromatic finish.'
 product_repository.save(product7)
 
 
-# print(product4.stock_level_check())
-# print(product6.stock_level_check())
-
 
 pdb.set_trace()
