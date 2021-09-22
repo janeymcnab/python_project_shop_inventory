@@ -5,22 +5,22 @@
 <form action="/manufacturers/{{ manufacturer.id }}" method="post">
     <div>
         <label for = "name">Name:</label>
-        <input name = "name" type = text id = name value = "{{ manufacturer.name }}">
+        <input name = "name" type = text id = name value = "{{ manufacturer.name }}" required>
     </div>
     <br>
     <div>
         <label for = "address">Address:</label>
-        <input name = "address" type = text id = address value = "{{ manufacturer.address }}">
+        <input name = "address" type = text id = address value = "{{ manufacturer.address }}" required>
     </div>
     <br>
     <div>
         <label for = "phone_number">Phone Number:</label>
-        <input name = "phone_number" type = text id = phone_number value = "{{ manufacturer.phone_number }}">
+        <input name = "phone_number" type = text id = phone_number value = "{{ manufacturer.phone_number }}" required>
     </div>
     <br>
     <div>
         <label for = "product_list">Product:</label>
-        <input name = "product_list" type = text id = product_list value= "{{ manufacturer.product_list }}" >
+        <input name = "product_list" type = text id = product_list value= "{{ manufacturer.product_list }}" required>
     </div>
     <br>
     <div>

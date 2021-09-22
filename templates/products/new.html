@@ -5,17 +5,17 @@
 <form action="/products" method="post">
     <div>
         <label for = "name">Name:</label>
-        <input name = "name" type = text id = name>
+        <input name = "name" type = text id = name required>
     </div>
     
     <div>
         <label for = "description">Description:</label>
-        <input name = "description" type = text id = description>
+        <input name = "description" type = text id = description required>
     </div>
     
     <div>
       <label for = "category">Category:</label>
-      <select id = "category" name = "category">
+      <select id = "category" name = "category" required>
         <option value= "" disabled selected>Select</option>
         <option value = "unpasteurised">Unpasteurised</option>
         <option value = "pasteurised">Pasteurised</option>
@@ -24,7 +24,7 @@
     
     <div>
       <label for = "milk_type"></label>Milk Type:</label>
-      <select id ="milk_type" name = "milk_type">
+      <select id ="milk_type" name = "milk_type" required>
         <option value= "" disabled selected>Select</option>
         <option value = "cow">Cow</option>
         <option value = "sheep">Sheep</option>
@@ -34,27 +34,27 @@
     
     <div>
         <label for = "stock_quantity">Stock Quantity:</label>
-        <input name = "stock_quantity" type = text id = stock_quantity>
+        <input name = "stock_quantity" type = text id = stock_quantity required>
     </div>
     
     <div>
         <label for = "buying_cost">Buying Cost:</label>
-        <input name = "buying_cost" type = text id = buying_cost>
+        <input name = "buying_cost" type = text id = buying_cost required>
     </div>
     
     <div>
         <label for = "selling_price">Selling Price:</label>
-        <input name = "selling_price" type = text id = selling_price>
+        <input name = "selling_price" type = text id = selling_price required>
     </div>
     
     <div>
         <label for = "origin">Origin:</label>
-        <input name = "origin" type = text id = origin>
+        <input name = "origin" type = text id = origin required>
     </div>
     
     <div>
         <label for="manufacturer">Manufacturer:</label>
-        <select id="manufacturer" name="manufacturer_id">
+        <select id="manufacturer" name="manufacturer_id" required>
           <option value= "" disabled selected>Select</option>
           {% for manufacturer in manufacturers %}
             <option value="{{ manufacturer.id }}">
