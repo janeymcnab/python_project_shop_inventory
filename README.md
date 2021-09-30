@@ -1,17 +1,16 @@
 The technologies used in this project:
 python  
-FLASK   
-POSTGRESQL  
+Flask  
+PostgreSQL  
 psycopg2    
 HTML/CSS    
-jinja
 
 
 To run first install the following:
-Enter the following commands into your terminal
-pip install psycopg2
-pip install FLASK
-To use Jinja - in VS Code, In the command palette ( cmd-shift-p ) select Install Extension and choose Jinja Snippets
+Enter the following commands into your terminal:
+pip3 install psycopg2
+pip3 install Flask
+pip3 install python-dotenv
 
 
 Clone the repository to your own directory:

@@ -17,7 +17,7 @@ class Product:
             return True
         else:
             return False
-
+ 
     def check_if_out(self):
         if self.stock_quantity <= 10:
             return True
